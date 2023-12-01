@@ -34,6 +34,11 @@ urlpatterns = [
     path('favicon.ico', RedirectView.as_view(url=static('favicon.ico'))),
     path('api',include(router.urls))
 ]
+
+#admin title header
+admin.site.site_header='XANADU FOOTBALL CLUB'
+admin.site.site_title='XANADU FC'
+admin.site.index_title='XANADU FC ADMIN AREA'
 urlpatterns+=static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
 handler404 = 'Xanadufc.views.error_404'
